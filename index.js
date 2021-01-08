@@ -1,6 +1,6 @@
 const axios = require("axios");
 const Redis = require("ioredis");
-const redis = new Redis();
+const redis = new Redis.Cluster([{ host: '127.0.0.1']);
 
 loadData();
 
